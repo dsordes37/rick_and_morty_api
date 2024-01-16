@@ -1,11 +1,38 @@
+:root{
+    --cor1:#F2507B;
+    --cor2:#66F2B1;
+    --cor3:#9BD991;
+    --cor4:#F2AB6D;
+    --cor5:#F27272;
+}
+
 *{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-}
-body{
+}.center{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+body{
+
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/028/853/683/large/nicholas-cole-jordan-flgtz-rickmorty-panorama-watermarked.jpg);
+    background-size: cover;
+    background-position: center;
+}main{
+    backdrop-filter: blur(10px);
+    height: 80vh;
+    width: 50vw;
     flex-direction: column;
+    border: 1px solid var(--cor5);
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.212);
+
+}img{
+    width: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
 }

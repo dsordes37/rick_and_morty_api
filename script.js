@@ -12,9 +12,10 @@ return result}
 
 
 
-bt.addEventListener('click', async (event)=>{
+id.addEventListener('input', async (event)=>{
     event.preventDefault();
+    img.src=`https://managedserver.it/wp-content/uploads/2023/07/css-loader.gif`
     const result= await url(id.value);
-    nome.innerHTML=`${result.name} : ${result.status}`;
+    nome.innerHTML=`${result.name} : ${result.status} : ${result.location.name}`;
     img.src=`${result.image}`
 })
