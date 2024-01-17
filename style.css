@@ -1,6 +1,6 @@
 :root{
     --cor1:#F2507B;
-    --cor2:#66F2B1;
+    --cor2:#185e3d;
     --cor3:#9BD991;
     --cor4:#F2AB6D;
     --cor5:#F27272;
@@ -63,4 +63,6 @@ body{
 
     border-radius: 10px;
     border: 2px solid var(--cor1);
+}h2{
+    color: var(--cor2);
 }

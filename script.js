@@ -20,15 +20,17 @@ return result}
 const retorno=async ( value)=>{
     img.style.backgroundImage=`url(https://managedserver.it/wp-content/uploads/2023/07/css-loader.gif)`
     const result= await url(value);
-    nome.innerHTML=`nome: ${result.name}`;
+    nome.innerHTML=`${result.name}`;
     especie.innerHTML=`espécie: ${result.species}`;
     sttz.innerHTML=`status: ${result.status}`;
     img.style.backgroundImage=`url(${result.image})`
     id.value=value;
 }
 
+
+
 const mais=()=>{
-    if(id.value==826){
+    if(id.value>=826){
         id.value=0
     }
     var value=parseInt(id.value)+1
@@ -37,7 +39,7 @@ const mais=()=>{
 
 
 const menos=()=>{
-    if(id.value==1){
+    if(id.value<=1){
         id.value=827
     }
     var value=parseInt(id.value)-1
