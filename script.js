@@ -24,11 +24,25 @@ const retorno=async ( value)=>{
     especie.innerHTML=`espécie: ${result.species}`;
     sttz.innerHTML=`status: ${result.status}`;
     img.style.backgroundImage=`url(${result.image})`
-    console.log(result)
-    id.value=value
+    id.value=value;
+}
+
+const mais=()=>{
+    if(id.value==826){
+        id.value=0
+    }
+    var value=parseInt(id.value)+1
+    retorno(value)
 }
 
 
+const menos=()=>{
+    if(id.value==1){
+        id.value=827
+    }
+    var value=parseInt(id.value)-1
+    retorno(value)
+}
 
 retorno(1)
 
@@ -41,19 +55,22 @@ id.addEventListener('input', async (event)=>{
 })
 
 left.addEventListener('click', (event)=>{
-    if(id.value==1){
-        id.value=827
-    }
-    var value=parseInt(id.value)-1
-    event.preventDefault()
-    retorno(value)
+    event.preventDefault();
+    menos();
 })
 
 right.addEventListener('click', (event)=>{
-    if(id.value==826){
-        id.value=0
-    }
-    var value=parseInt(id.value)+1
-    event.preventDefault()
-    retorno(value)
+    event.preventDefault();
+    mais();
+})
+
+
+document.addEventListener('keydown', (event)=>{
+    if(event.key=='ArrowRight'){
+        event.preventDefault();
+        mais();
+    }else if(event.key=='ArrowLeft'){
+        event.preventDefault();
+        menos();
+    };
 })
